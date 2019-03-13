@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Register</h1>
+    <h1>FITNESS-TRACKER-REGISTRATION</h1>
 
     <input
       type="email"
