@@ -9,9 +9,9 @@ app.use(bodyParser.json())
 app.use(cors())
 
 app.get('/status', (req, res) => {
-    res.send({
+  res.send({
         message: 'Hello Fitness World'
-    })
+  })
 })
-  
+ 
 app.listen(process.env.PORT || 8081)
