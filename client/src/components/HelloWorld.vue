@@ -5,15 +5,15 @@
     <ul>
       <li>
         <a
-          href="https://vuejs.org"
+          href="https://www.acefitness.org/education-and-resources/lifestyle/blog/6593/top-25-at-home-exercises"
           target="_blank"
         >
-          Core Docs
+          Excercises
         </a>
       </li>
       <li>
         <a
-          href="https://forum.vuejs.org"
+          href="https://forum.muscleandstrength.com/"
           target="_blank"
         >
           Forum
@@ -21,15 +21,15 @@
       </li>
       <li>
         <a
-          href="https://chat.vuejs.org"
+          href="https://www.onhealth.com/content/1/nutrition_and_fitness"
           target="_blank"
         >
-          Community Chat
+          Nutrition
         </a>
       </li>
       <li>
         <a
-          href="https://twitter.com/vuejs"
+          href="https://twitter.com/hashtag/fitness?lang=en"
           target="_blank"
         >
           Twitter
@@ -38,10 +38,10 @@
       <br>
       <li>
         <a
-          href="http://vuejs-templates.github.io/webpack/"
+          href="https://www.inkin.com/"
           target="_blank"
         >
-          Docs for This Template
+          Community Chat
         </a>
       </li>
     </ul>
@@ -49,34 +49,34 @@
     <ul>
       <li>
         <a
-          href="http://router.vuejs.org/"
+          href="https://deniseleeyohn.com/build-fitness-tech-ecosystem/"
           target="_blank"
         >
-          vue-router
+          fitness-tech-ecosyatem
         </a>
       </li>
       <li>
         <a
-          href="http://vuex.vuejs.org/"
+          href="https://medium.com/@playtness/how-playtness-benefits-every-member-of-the-fitness-ecosystem-ef56b0ae7b79"
           target="_blank"
         >
-          vuex
+          fitness-benifits
         </a>
       </li>
       <li>
         <a
-          href="http://vue-loader.vuejs.org/"
+          href="https://clubsolutionsmagazine.com/2017/12/building-wearable-tech-ecosystem/"
           target="_blank"
         >
-          vue-loader
+          wearable-technology-ecosystem
         </a>
       </li>
       <li>
         <a
-          href="https://github.com/vuejs/awesome-vue"
+          href="https://www.refinery29.com/en-us/best-nyc-fitness-classes"
           target="_blank"
         >
-          awesome-vue
+          awesome-fitness
         </a>
       </li>
     </ul>
@@ -88,7 +88,7 @@ export default {
   name: 'HelloWorld',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: 'Welcome to Fitness Tracker App'
     }
   }
 }
