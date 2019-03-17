@@ -2,7 +2,7 @@
   "name": "fitness-tracker-app",
   "version": "1.0.0",
   "description": "Web Application that will help all details about the Fitness",
-  "main": "index.js",
+  "main": "C:/Users/yadav/Desktop/Web_Server_Project/Fitness-Tracker-App/client/src/router/index.js",
   "scripts": {
     "start": "nodemon src/app.js ",
     "lint": "node_modules/.bin/eslint **/*.js",
@@ -20,8 +20,10 @@
   "homepage": "https://github.com/deepikagotla/Fitness-Tracker-App#readme",
   "dependencies": {
     "D": "^1.0.0",
+    "cors": "^2.8.5",
     "dotenv": "^7.0.0",
     "express": "^4.16.4",
+    "morgan": "^1.9.1",
     "mysql": "^2.16.0",
     "nodemon": "^1.18.10"
   }
