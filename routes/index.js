@@ -1,9 +1,17 @@
+const router = require('express').Router();
+const exerciseCtrl = require('./../controllers/exercise');
+const friendCtrl = require('./../controllers/friend');
 
-/*
- * GET home page.
- */
+router.post('/exercise', exerciseCtrl.createExercise);
+router.get('/exercises', exerciseCtrl.getAllExercises);
+router.put('/exercise', exerciseCtrl.updateExercise);
+router.delete('/exercise', exerciseCtrl.removeExercise);
+router.get('/exercise', exerciseCtrl.getExercise);
 
-exports.index = function(req, res){
-	console.log(req.body);
-	res.end();
-};
+router.post('/friend', friendCtrl.createFriend);
+router.get('/friends', friendCtrl.getAllFriends);
+router.put('/friend', friendCtrl.updateFriend);
+router.delete('/friend', friendCtrl.removeFriend);
+router.get('/friend', friendCtrl.getFriend);
+
+module.exports = router;
