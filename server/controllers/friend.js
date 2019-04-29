@@ -10,7 +10,8 @@ exports.createFriend = function (req, res) {
   });
 }
 exports.getAllFriends = function (req, res) {
-  var sql = 'SELECT * FROM `friends`';
+  var sql = `Select * from users where id IN 
+  (select friend_id from friends where user_id=${req.query.id})`;
   connection.query(sql, function (err, result) {
     if (err) {
       console.log(err);
@@ -34,7 +35,7 @@ exports.updateFriend = function (req, res) {
   });
 }
 exports.removeFriend = function (req, res) {
-  const query = 'DELETE FROM friends WHERE id = ?'
+  const query = `DELETE FROM friends WHERE  user_id=${req.query.user_id} AND friend_id=${req.query.friend_id}`
   connection.query(query, [req.query.id], (err, result) => {
     if (err) {
       console.log(err);

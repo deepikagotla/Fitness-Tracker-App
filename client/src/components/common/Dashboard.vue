@@ -1,10 +1,12 @@
 <template>
-  <div class="dashboard">
-    <navbar />
-    <div class="" >
-      <div class="main-content">
+  <div class="container">
+    <div class="row">
+        <navbar />
+    </div>
+    <div class="row " >      
+      <div class="main-content ">
         <router-view></router-view>
-      </div>
+      </div>      
     </div>
   </div>
 </template>
@@ -44,19 +46,4 @@ export default {
 
 <style>
 
-
-.dropdown-menu {
-  min-width: 100px;
-  /* width: 100px; */
-  left: -60px;
-}
-.img-box {
-  position: absolute;
-  right: 30px;
-  top: 1px;
-}
-.main-content{
-  min-height: 91vh;
-  
-}
 </style>

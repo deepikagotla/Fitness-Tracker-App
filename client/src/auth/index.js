@@ -34,7 +34,7 @@ export default {
           resolve(data.body.results);
         } else {
           let msg = data.body.results.msg || 'Unable to Login';
-          reject(data.body.results.msg);
+          reject(msg);
         }
       })
       .catch((err) => {
