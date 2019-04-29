@@ -13,9 +13,9 @@
 		var gender = req.body.gender;
 	  var pass = req.body.password;
 	  var email = req.body.email;
-	  var dec_pass = atob(pass);
-	  var encrypted_pass = cryptr.encrypt(dec_pass);
-	  var sql = "INSERT INTO `users`(`first_name`,`last_name`,`gender`,`email`,`password`) VALUES ('" + fname + "','" + lname + "','" + gender + "','" + email + "','" + encrypted_pass + "')";
+	  // var dec_pass = atob(pass);
+	  // var encrypted_pass = cryptr.encrypt(dec_pass);
+	  var sql = "INSERT INTO `users`(`first_name`,`last_name`,`gender`,`email`,`password`) VALUES ('" + fname + "','" + lname + "','" + gender + "','" + email + "','" + pass + "')";
 
 	  connection.query(sql, function (err, result) {
 	    if (err) {
@@ -30,11 +30,13 @@
 	exports.signin = function (req, res) {
 	  var name = req.body.email;
 	  var pass = req.body.password;
-	  var dec_pass = atob(pass);
-	  var encrypted_pass = cryptr.encrypt(dec_pass);
-	  var sql = "SELECT id, first_name, last_name, phone, dob, gender, email FROM `users` WHERE `email`='" + name + "' and password = '" + encrypted_pass + "'";
+	  // var dec_pass = atob(pass);
+	  // var encrypted_pass = cryptr.encrypt(dec_pass);
+	  var sql = "SELECT id, first_name, last_name, phone, dob, gender, email FROM `users` WHERE `email`='" + name + "' and password = '" + pass + "'";
 
 	  connection.query(sql, function (err, results) {
+console.log(sql);
+console.log(req.body);
 			jwtLogin(res,err, results);
 	  });
 	};
