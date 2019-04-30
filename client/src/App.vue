@@ -26,6 +26,12 @@
     top: 50%;
     z-index: 99;
   }
+  .center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
   .cursor-pointer {
     cursor: pointer;
   }

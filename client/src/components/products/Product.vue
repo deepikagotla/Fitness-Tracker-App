@@ -1,6 +1,6 @@
 <template>
  <div class="col-lg-12">
-  <div class="" style="text-align: center;margin-bottom:20px">
+  <!-- <div class="" style="text-align: center;margin-bottom:20px">
     <img src="../../assets/products/1.png" alt="" alt="Snow" style="">
     <br/><strong>HI-TECH PHARMACEUTICALS OFF THE CHAIN®2$24.50 $34.95</strong>
   </div>
@@ -28,7 +28,7 @@ APS NUTRITION HYDROMAX 180 TABS1$29.95 $39.95</strong>
   </div>
   <div class="" style="text-align: center;margin-bottom:20px">
     <img src="../../assets/products/7.png" alt="" alt="Mountains" style="">
-  </div>
+  </div> -->
 </div>
 </template>
 

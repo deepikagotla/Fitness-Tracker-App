@@ -29,11 +29,37 @@
               <li><a href="#/dashboard/profile">Profile</a></li>
               <li><a href="#/dashboard/friends">Friends</a></li>
               
-              <li >
-                  <a href="#/dashboard/excersice" >Exersice</a>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Exercise <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#/dashboard/exercise-fitness">Physical Fitness</a></li>
+                    <li><a href="#/dashboard/exercise-mental">Mental Fitness</a></li>
+                    <li ><a href="#/dashboard/exercise-routine">Routine Exercise</a></li>
+                    <li class="dropdown-submenu">
+                        <a class="test" tabindex="-1" href="#">Workouts <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                          <li><a tabindex="-1" href="#/dashboard/exercise-running">Running or walking</a></li>
+                          <li><a tabindex="-1" href="#/dashboard/exercise-bicycling">Bicycling</a></li>
+                          <li><a tabindex="-1" href="#/dashboard/exercise-bicycle-exercise">The Bicycle Exercise</a></li>
+                          <li><a tabindex="-1" href="#/dashboard/exercise-CRUNCHES">CRUNCHES</a></li>
+                          <li><a tabindex="-1" href="#/dashboard/exercise-LUNGES">LUNGES</a></li>
+                          <li><a tabindex="-1" href="#/dashboard/exercise-PUSHup">PUSH UPS</a></li>
+                          <li><a tabindex="-1" href="#/dashboard/exercise-SQUATS">SQUATS</a></li>
+                      </ul>
+                    </li>
+                  </ul>
                 </li>
                 <li><a href="#/dashboard/products">Products</a></li>
-                <li><a href="#/dashboard/diet">Diet Plans</a></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Diet Plans <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#/dashboard/fatburn">Fat Burn</a></li>
+                    <li><a href="#/dashboard/sixpack">Six Pack</a></li>
+                    <li ><a href="#/dashboard/weightloss">Weight Loss</a></li>
+                    <li ><a href="#/dashboard/burnbellyfat">Burn Belly Fat</a></li>
+                    <li ><a href="#/dashboard/fitnessregular">Fitness Regular</a></li>
+                  </ul>
+                </li>
                 <li><a href="#/dashboard/users">All Users</a></li>
             </ul>
             
@@ -72,6 +98,8 @@
   import $ from 'jquery';
   import auth from '../../auth'
 
+
+
   export default {
     name: 'Navbar',
     props: [],
@@ -83,8 +111,14 @@
     },
     mounted() {
       // this.displayImage = this.userData.profileImage ? this.userData.profileImage : '';
+      window.$('.dropdown-submenu a.test').on("click", function(e){
+    $(this).next('ul').toggle();
+    e.stopPropagation();
+    e.preventDefault();
+  });
     },
     computed: {
+      
       userData() {
         return auth.getUser();      
       },
@@ -164,7 +198,15 @@ color: #999;
   right: 30px;
   top: 10px;
 }
+.dropdown-submenu {
+    position: relative;
+}
 
+.dropdown-submenu .dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -1px;
+}
 
 
 
