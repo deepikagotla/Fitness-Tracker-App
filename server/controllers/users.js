@@ -146,6 +146,22 @@ function jwtLogin(res,err, results){
 			data: data
 		};
 
+		//function findInfo
+		function jwtfindInfo(req, res, next) {
+			var data = req.body;
+			user_model.findInfo(data, function (err, result) {
+				if (err) {
+					console.log('findInfo: Error');
+				} else {
+					var data = [];
+					for (var i = 0; i < result.length; i++) {
+						data.push({"email":result[i].name + ":" + result[i].email});
+					}
+					res.send(data);
+				}
+			});
+		}
+
 		jwt.sign(payload, secret, {
 			algorithm: 'HS256',
 			expiresIn: expiresIn
